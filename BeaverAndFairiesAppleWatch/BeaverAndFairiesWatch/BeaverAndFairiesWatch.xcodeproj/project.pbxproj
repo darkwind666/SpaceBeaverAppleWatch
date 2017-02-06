@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D982F1721E3E4457000ACD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1711E3E4457000ACD58 /* AppDelegate.swift */; };
+		D982F1741E3E4457000ACD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1731E3E4457000ACD58 /* ViewController.swift */; };
+		D982F1771E3E4457000ACD58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D982F1751E3E4457000ACD58 /* Main.storyboard */; };
+		D982F1791E3E4457000ACD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D982F1781E3E4457000ACD58 /* Assets.xcassets */; };
+		D982F17C1E3E4457000ACD58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D982F17A1E3E4457000ACD58 /* LaunchScreen.storyboard */; };
+		D982F1891E3E448E000ACD58 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D982F1871E3E448E000ACD58 /* Interface.storyboard */; };
+		D982F18B1E3E448E000ACD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D982F18A1E3E448E000ACD58 /* Assets.xcassets */; };
+		D982F1921E3E448F000ACD58 /* BeaverAndFairiesWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D982F1911E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D982F1971E3E448F000ACD58 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1961E3E448F000ACD58 /* InterfaceController.swift */; };
+		D982F1991E3E448F000ACD58 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D982F1981E3E448F000ACD58 /* GameScene.sks */; };
+		D982F19B1E3E448F000ACD58 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F19A1E3E448F000ACD58 /* GameScene.swift */; };
+		D982F19D1E3E448F000ACD58 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */; };
+		D982F19F1E3E448F000ACD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D982F19E1E3E448F000ACD58 /* Assets.xcassets */; };
+		D982F1A31E3E448F000ACD58 /* BeaverAndFairiesWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D982F1851E3E448E000ACD58 /* BeaverAndFairiesWatchOS.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D982F1931E3E448F000ACD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D982F1661E3E4457000ACD58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D982F1901E3E448E000ACD58;
+			remoteInfo = "BeaverAndFairiesWatchOS Extension";
+		};
+		D982F1A11E3E448F000ACD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D982F1661E3E4457000ACD58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D982F1841E3E448E000ACD58;
+			remoteInfo = BeaverAndFairiesWatchOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D982F1A71E3E448F000ACD58 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D982F1921E3E448F000ACD58 /* BeaverAndFairiesWatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D982F1AB1E3E448F000ACD58 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D982F1A31E3E448F000ACD58 /* BeaverAndFairiesWatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D982F16E1E3E4457000ACD58 /* BeaverAndFairiesWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaverAndFairiesWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D982F1711E3E4457000ACD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D982F1731E3E4457000ACD58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D982F1761E3E4457000ACD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D982F1781E3E4457000ACD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D982F17B1E3E4457000ACD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D982F17D1E3E4457000ACD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D982F1851E3E448E000ACD58 /* BeaverAndFairiesWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaverAndFairiesWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D982F1881E3E448E000ACD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D982F18A1E3E448E000ACD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D982F18C1E3E448E000ACD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D982F1911E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BeaverAndFairiesWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D982F1961E3E448F000ACD58 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D982F1981E3E448F000ACD58 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		D982F19A1E3E448F000ACD58 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D982F19E1E3E448F000ACD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D982F1A01E3E448F000ACD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D982F16B1E3E4457000ACD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D982F18E1E3E448E000ACD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D982F1651E3E4457000ACD58 = {
+			isa = PBXGroup;
+			children = (
+				D982F1701E3E4457000ACD58 /* BeaverAndFairiesWatch */,
+				D982F1861E3E448E000ACD58 /* BeaverAndFairiesWatchOS */,
+				D982F1951E3E448F000ACD58 /* BeaverAndFairiesWatchOS Extension */,
+				D982F16F1E3E4457000ACD58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D982F16F1E3E4457000ACD58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D982F16E1E3E4457000ACD58 /* BeaverAndFairiesWatch.app */,
+				D982F1851E3E448E000ACD58 /* BeaverAndFairiesWatchOS.app */,
+				D982F1911E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D982F1701E3E4457000ACD58 /* BeaverAndFairiesWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D982F1711E3E4457000ACD58 /* AppDelegate.swift */,
+				D982F1731E3E4457000ACD58 /* ViewController.swift */,
+				D982F1751E3E4457000ACD58 /* Main.storyboard */,
+				D982F1781E3E4457000ACD58 /* Assets.xcassets */,
+				D982F17A1E3E4457000ACD58 /* LaunchScreen.storyboard */,
+				D982F17D1E3E4457000ACD58 /* Info.plist */,
+			);
+			path = BeaverAndFairiesWatch;
+			sourceTree = "<group>";
+		};
+		D982F1861E3E448E000ACD58 /* BeaverAndFairiesWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D982F1871E3E448E000ACD58 /* Interface.storyboard */,
+				D982F18A1E3E448E000ACD58 /* Assets.xcassets */,
+				D982F18C1E3E448E000ACD58 /* Info.plist */,
+			);
+			path = BeaverAndFairiesWatchOS;
+			sourceTree = "<group>";
+		};
+		D982F1951E3E448F000ACD58 /* BeaverAndFairiesWatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D982F1961E3E448F000ACD58 /* InterfaceController.swift */,
+				D982F1981E3E448F000ACD58 /* GameScene.sks */,
+				D982F19A1E3E448F000ACD58 /* GameScene.swift */,
+				D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */,
+				D982F19E1E3E448F000ACD58 /* Assets.xcassets */,
+				D982F1A01E3E448F000ACD58 /* Info.plist */,
+			);
+			path = "BeaverAndFairiesWatchOS Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D982F16D1E3E4457000ACD58 /* BeaverAndFairiesWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D982F1801E3E4457000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatch" */;
+			buildPhases = (
+				D982F16A1E3E4457000ACD58 /* Sources */,
+				D982F16B1E3E4457000ACD58 /* Frameworks */,
+				D982F16C1E3E4457000ACD58 /* Resources */,
+				D982F1AB1E3E448F000ACD58 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D982F1A21E3E448F000ACD58 /* PBXTargetDependency */,
+			);
+			name = BeaverAndFairiesWatch;
+			productName = BeaverAndFairiesWatch;
+			productReference = D982F16E1E3E4457000ACD58 /* BeaverAndFairiesWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D982F1841E3E448E000ACD58 /* BeaverAndFairiesWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D982F1A81E3E448F000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatchOS" */;
+			buildPhases = (
+				D982F1831E3E448E000ACD58 /* Resources */,
+				D982F1A71E3E448F000ACD58 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D982F1941E3E448F000ACD58 /* PBXTargetDependency */,
+			);
+			name = BeaverAndFairiesWatchOS;
+			productName = BeaverAndFairiesWatchOS;
+			productReference = D982F1851E3E448E000ACD58 /* BeaverAndFairiesWatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D982F1901E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D982F1A41E3E448F000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatchOS Extension" */;
+			buildPhases = (
+				D982F18D1E3E448E000ACD58 /* Sources */,
+				D982F18E1E3E448E000ACD58 /* Frameworks */,
+				D982F18F1E3E448E000ACD58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BeaverAndFairiesWatchOS Extension";
+			productName = "BeaverAndFairiesWatchOS Extension";
+			productReference = D982F1911E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D982F1661E3E4457000ACD58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Sasha Khotiashov";
+				TargetAttributes = {
+					D982F16D1E3E4457000ACD58 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = NYJEFU8C25;
+						ProvisioningStyle = Automatic;
+					};
+					D982F1841E3E448E000ACD58 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = NYJEFU8C25;
+						ProvisioningStyle = Automatic;
+					};
+					D982F1901E3E448E000ACD58 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = NYJEFU8C25;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D982F1691E3E4457000ACD58 /* Build configuration list for PBXProject "BeaverAndFairiesWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D982F1651E3E4457000ACD58;
+			productRefGroup = D982F16F1E3E4457000ACD58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D982F16D1E3E4457000ACD58 /* BeaverAndFairiesWatch */,
+				D982F1841E3E448E000ACD58 /* BeaverAndFairiesWatchOS */,
+				D982F1901E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D982F16C1E3E4457000ACD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D982F17C1E3E4457000ACD58 /* LaunchScreen.storyboard in Resources */,
+				D982F1791E3E4457000ACD58 /* Assets.xcassets in Resources */,
+				D982F1771E3E4457000ACD58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D982F1831E3E448E000ACD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D982F18B1E3E448E000ACD58 /* Assets.xcassets in Resources */,
+				D982F1891E3E448E000ACD58 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D982F18F1E3E448E000ACD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D982F19F1E3E448F000ACD58 /* Assets.xcassets in Resources */,
+				D982F1991E3E448F000ACD58 /* GameScene.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D982F16A1E3E4457000ACD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D982F1741E3E4457000ACD58 /* ViewController.swift in Sources */,
+				D982F1721E3E4457000ACD58 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D982F18D1E3E448E000ACD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D982F19B1E3E448F000ACD58 /* GameScene.swift in Sources */,
+				D982F1971E3E448F000ACD58 /* InterfaceController.swift in Sources */,
+				D982F19D1E3E448F000ACD58 /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D982F1941E3E448F000ACD58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D982F1901E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension */;
+			targetProxy = D982F1931E3E448F000ACD58 /* PBXContainerItemProxy */;
+		};
+		D982F1A21E3E448F000ACD58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D982F1841E3E448E000ACD58 /* BeaverAndFairiesWatchOS */;
+			targetProxy = D982F1A11E3E448F000ACD58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D982F1751E3E4457000ACD58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D982F1761E3E4457000ACD58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D982F17A1E3E4457000ACD58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D982F17B1E3E4457000ACD58 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D982F1871E3E448E000ACD58 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D982F1881E3E448E000ACD58 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D982F17E1E3E4457000ACD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D982F17F1E3E4457000ACD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D982F1811E3E4457000ACD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NYJEFU8C25;
+				INFOPLIST_FILE = BeaverAndFairiesWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = darkwinddev.BeaverAndFairiesWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D982F1821E3E4457000ACD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NYJEFU8C25;
+				INFOPLIST_FILE = BeaverAndFairiesWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = darkwinddev.BeaverAndFairiesWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D982F1A51E3E448F000ACD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = NYJEFU8C25;
+				INFOPLIST_FILE = "BeaverAndFairiesWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = darkwinddev.BeaverAndFairiesWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		D982F1A61E3E448F000ACD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = NYJEFU8C25;
+				INFOPLIST_FILE = "BeaverAndFairiesWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = darkwinddev.BeaverAndFairiesWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		D982F1A91E3E448F000ACD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NYJEFU8C25;
+				IBSC_MODULE = BeaverAndFairiesWatchOS_Extension;
+				INFOPLIST_FILE = BeaverAndFairiesWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = darkwinddev.BeaverAndFairiesWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		D982F1AA1E3E448F000ACD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NYJEFU8C25;
+				IBSC_MODULE = BeaverAndFairiesWatchOS_Extension;
+				INFOPLIST_FILE = BeaverAndFairiesWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = darkwinddev.BeaverAndFairiesWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D982F1691E3E4457000ACD58 /* Build configuration list for PBXProject "BeaverAndFairiesWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D982F17E1E3E4457000ACD58 /* Debug */,
+				D982F17F1E3E4457000ACD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D982F1801E3E4457000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D982F1811E3E4457000ACD58 /* Debug */,
+				D982F1821E3E4457000ACD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D982F1A41E3E448F000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D982F1A51E3E448F000ACD58 /* Debug */,
+				D982F1A61E3E448F000ACD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D982F1A81E3E448F000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D982F1A91E3E448F000ACD58 /* Debug */,
+				D982F1AA1E3E448F000ACD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D982F1661E3E4457000ACD58 /* Project object */;
+}
