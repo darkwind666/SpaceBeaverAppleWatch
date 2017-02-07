@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class MainGameController: WKInterfaceController {
 
     @IBOutlet var skInterface: WKInterfaceSKScene!
     
@@ -20,7 +20,7 @@ class InterfaceController: WKInterfaceController {
         // Configure interface objects here.
         
         // Load the SKScene from 'GameScene.sks'
-        if let scene = GameScene(fileNamed: "GameScene") {
+        if let scene = GameScene(fileNamed: "GameMenuScene") {
             
             // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFill
@@ -42,5 +42,7 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    
 
 }

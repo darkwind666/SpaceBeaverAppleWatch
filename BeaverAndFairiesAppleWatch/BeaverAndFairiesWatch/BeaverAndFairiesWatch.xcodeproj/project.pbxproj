@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92338721E49FB4C00E64C50 /* MainGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D92338711E49FB4C00E64C50 /* MainGameScene.sks */; };
+		D92338761E4A046300E64C50 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92338751E4A046300E64C50 /* MainMenuController.swift */; };
 		D982F1721E3E4457000ACD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1711E3E4457000ACD58 /* AppDelegate.swift */; };
 		D982F1741E3E4457000ACD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1731E3E4457000ACD58 /* ViewController.swift */; };
 		D982F1771E3E4457000ACD58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D982F1751E3E4457000ACD58 /* Main.storyboard */; };
@@ -15,8 +17,8 @@
 		D982F1891E3E448E000ACD58 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D982F1871E3E448E000ACD58 /* Interface.storyboard */; };
 		D982F18B1E3E448E000ACD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D982F18A1E3E448E000ACD58 /* Assets.xcassets */; };
 		D982F1921E3E448F000ACD58 /* BeaverAndFairiesWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D982F1911E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D982F1971E3E448F000ACD58 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1961E3E448F000ACD58 /* InterfaceController.swift */; };
-		D982F1991E3E448F000ACD58 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D982F1981E3E448F000ACD58 /* GameScene.sks */; };
+		D982F1971E3E448F000ACD58 /* MainGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1961E3E448F000ACD58 /* MainGameController.swift */; };
+		D982F1991E3E448F000ACD58 /* GameMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D982F1981E3E448F000ACD58 /* GameMenuScene.sks */; };
 		D982F19B1E3E448F000ACD58 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F19A1E3E448F000ACD58 /* GameScene.swift */; };
 		D982F19D1E3E448F000ACD58 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */; };
 		D982F19F1E3E448F000ACD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D982F19E1E3E448F000ACD58 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D92338711E49FB4C00E64C50 /* MainGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainGameScene.sks; sourceTree = "<group>"; };
+		D92338751E4A046300E64C50 /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuController.swift; path = Controllers/MainMenuController.swift; sourceTree = "<group>"; };
 		D982F16E1E3E4457000ACD58 /* BeaverAndFairiesWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaverAndFairiesWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D982F1711E3E4457000ACD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D982F1731E3E4457000ACD58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,8 +82,8 @@
 		D982F18A1E3E448E000ACD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D982F18C1E3E448E000ACD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D982F1911E3E448E000ACD58 /* BeaverAndFairiesWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BeaverAndFairiesWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D982F1961E3E448F000ACD58 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		D982F1981E3E448F000ACD58 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		D982F1961E3E448F000ACD58 /* MainGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameController.swift; sourceTree = "<group>"; };
+		D982F1981E3E448F000ACD58 /* GameMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameMenuScene.sks; sourceTree = "<group>"; };
 		D982F19A1E3E448F000ACD58 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D982F19E1E3E448F000ACD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D92338731E49FB5900E64C50 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D92338711E49FB4C00E64C50 /* MainGameScene.sks */,
+				D982F1981E3E448F000ACD58 /* GameMenuScene.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		D92338741E4A040700E64C50 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D982F1961E3E448F000ACD58 /* MainGameController.swift */,
+				D92338751E4A046300E64C50 /* MainMenuController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		D982F1651E3E4457000ACD58 = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +172,8 @@
 		D982F1951E3E448F000ACD58 /* BeaverAndFairiesWatchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D982F1961E3E448F000ACD58 /* InterfaceController.swift */,
-				D982F1981E3E448F000ACD58 /* GameScene.sks */,
+				D92338741E4A040700E64C50 /* Controllers */,
+				D92338731E49FB5900E64C50 /* Scenes */,
 				D982F19A1E3E448F000ACD58 /* GameScene.swift */,
 				D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */,
 				D982F19E1E3E448F000ACD58 /* Assets.xcassets */,
@@ -287,8 +309,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92338721E49FB4C00E64C50 /* MainGameScene.sks in Resources */,
 				D982F19F1E3E448F000ACD58 /* Assets.xcassets in Resources */,
-				D982F1991E3E448F000ACD58 /* GameScene.sks in Resources */,
+				D982F1991E3E448F000ACD58 /* GameMenuScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D982F19B1E3E448F000ACD58 /* GameScene.swift in Sources */,
-				D982F1971E3E448F000ACD58 /* InterfaceController.swift in Sources */,
+				D92338761E4A046300E64C50 /* MainMenuController.swift in Sources */,
+				D982F1971E3E448F000ACD58 /* MainGameController.swift in Sources */,
 				D982F19D1E3E448F000ACD58 /* ExtensionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +587,7 @@
 				D982F1821E3E4457000ACD58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D982F1A41E3E448F000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatchOS Extension" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +596,7 @@
 				D982F1A61E3E448F000ACD58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D982F1A81E3E448F000ACD58 /* Build configuration list for PBXNativeTarget "BeaverAndFairiesWatchOS" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +605,7 @@
 				D982F1AA1E3E448F000ACD58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
