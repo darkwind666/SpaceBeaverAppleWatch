@@ -14,14 +14,82 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="MainGameController" customModule="BeaverAndFairiesWatchOS_Extension">
                     <items>
-                        <spriteKitScene alignment="left" id="ARY-87-yzO"/>
+                        <spriteKitScene alignment="left" id="ARY-87-yzO">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="3DV-V3-WPS">
+                                    <connections>
+                                        <action selector="userTap:" destination="AgC-eL-Hgc" id="VfP-wk-GLG"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                                <swipeGestureRecognizer id="aeD-lS-weF">
+                                    <connections>
+                                        <action selector="userSwapRight:" destination="AgC-eL-Hgc" id="U0z-dg-ehw"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="jbp-hO-cO3">
+                                    <connections>
+                                        <action selector="userSwapLeft:" destination="AgC-eL-Hgc" id="NIg-SU-gDS"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="4" id="SbK-GU-2Zr">
+                                    <connections>
+                                        <action selector="userSwapUp:" destination="AgC-eL-Hgc" id="8K6-Vr-532"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="8" id="L4L-zt-41B">
+                                    <connections>
+                                        <action selector="userSwapDown:" destination="AgC-eL-Hgc" id="j31-Er-nHn"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </spriteKitScene>
                     </items>
+                    <menu key="menu" id="u4e-Nj-eYj">
+                        <items>
+                            <menuItem title="Resume" icon="resume" id="qSr-UI-lD9">
+                                <connections>
+                                    <action selector="resumeGamePressed" destination="AgC-eL-Hgc" id="JcR-wu-2on"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Back" icon="decline" id="diz-FM-dYM">
+                                <connections>
+                                    <action selector="backPressed" destination="AgC-eL-Hgc" id="NK4-jk-0jO"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="skInterface" destination="ARY-87-yzO" id="U6w-Od-uXj"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="205" y="186"/>
+            <point key="canvasLocation" x="164" y="186"/>
+        </scene>
+        <!--GameEndController-->
+        <scene sceneID="Dza-e1-i2U">
+            <objects>
+                <controller identifier="GameEndController" id="AOt-NG-MZI" customClass="GameEndController" customModule="BeaverAndFairiesWatchOS_Extension">
+                    <items>
+                        <label width="79" alignment="center" text="Label" textAlignment="center" id="2KI-Wi-WHH" userLabel="ScoreLabel">
+                            <color key="textColor" red="0.62745098039215685" green="0.45490196078431372" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <button width="70" height="63" alignment="center" backgroundImage="okonchanie_igry-4" id="O8x-0B-hjT" userLabel="ReplayGame">
+                            <connections>
+                                <action selector="replayPressed" destination="AOt-NG-MZI" id="Yfb-ha-awZ"/>
+                            </connections>
+                        </button>
+                        <button width="60" height="60" alignment="center" verticalAlignment="center" backgroundImage="2-05-2" id="8fk-WU-2R3" userLabel="Back">
+                            <connections>
+                                <action selector="backPressed" destination="AOt-NG-MZI" id="xSN-13-fcL"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="scoreLabel" destination="2KI-Wi-WHH" id="bVe-7i-LZ7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="395" y="186"/>
         </scene>
         <!--Main Menu Controller-->
         <scene sceneID="lES-Uk-z8c">

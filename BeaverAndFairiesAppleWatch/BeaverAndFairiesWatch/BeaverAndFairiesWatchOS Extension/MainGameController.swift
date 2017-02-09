@@ -9,10 +9,21 @@
 import WatchKit
 import Foundation
 
+enum PlayerDirection {
+    case Tap
+    case Right
+    case Left
+    case Up
+    case Down
+    case None
+}
 
 class MainGameController: WKInterfaceController {
 
     @IBOutlet var skInterface: WKInterfaceSKScene!
+    
+    var playerDirection: PlayerDirection = .None
+    private var gameScene:GameScene!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -20,10 +31,11 @@ class MainGameController: WKInterfaceController {
         // Configure interface objects here.
         
         // Load the SKScene from 'GameScene.sks'
-        if let scene = GameScene(fileNamed: "GameMenuScene") {
+        if let scene = GameScene(fileNamed: "MainGameScene") {
             
             // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFill
+            scene.gameController = self
             
             // Present the scene
             self.skInterface.presentScene(scene)
@@ -41,8 +53,35 @@ class MainGameController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        gameScene.stopGame = true
     }
     
+    @IBAction func resumeGamePressed() {
+        pushController(withName: "GameEndController", context: Any?.self)
+    }
     
+    @IBAction func backPressed() {
+        pop()
+    }
+    
+    @IBAction func userTap(_ sender: Any) {
+        playerDirection = .Tap
+    }
+    
+    @IBAction func userSwapRight(_ sender: Any) {
+        playerDirection = .Right
+    }
+    
+    @IBAction func userSwapLeft(_ sender: Any) {
+        playerDirection = .Left
+    }
+    
+    @IBAction func userSwapUp(_ sender: Any) {
+        playerDirection = .Up
+    }
+    
+    @IBAction func userSwapDown(_ sender: Any) {
+        playerDirection = .Down
+    }
 
 }

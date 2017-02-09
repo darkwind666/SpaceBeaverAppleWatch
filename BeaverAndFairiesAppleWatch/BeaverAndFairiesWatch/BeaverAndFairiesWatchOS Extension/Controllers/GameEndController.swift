@@ -1,5 +1,5 @@
 //
-//  MainMenuController.swift
+//  GamePauseController.swift
 //  BeaverAndFairiesWatch
 //
 //  Created by Sasha Khotiashov on 2/7/17.
@@ -10,21 +10,18 @@ import WatchKit
 import Foundation
 
 
-class MainMenuController: WKInterfaceController {
-    
-    @IBOutlet var scoresLabel: WKInterfaceLabel!
-    
-    var pauseGame = false
-    
+class GameEndController: WKInterfaceController {
+    @IBOutlet var scoreLabel: WKInterfaceLabel!
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
         // Configure interface objects here.
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        scoresLabel.setText("")
     }
 
     override func didDeactivate() {
@@ -32,8 +29,12 @@ class MainMenuController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    @IBAction func gameCenterButtonPressed() {
+    @IBAction func replayPressed() {
+        pop()
     }
     
+    @IBAction func backPressed() {
+        popToRootController()
+    }
 
 }
