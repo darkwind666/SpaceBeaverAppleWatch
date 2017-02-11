@@ -36,6 +36,7 @@ class MainGameController: WKInterfaceController {
             // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFill
             scene.gameController = self
+            gameScene = scene
             
             // Present the scene
             self.skInterface.presentScene(scene)
@@ -53,7 +54,7 @@ class MainGameController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-        gameScene.stopGame = true
+        gameScene.pauseGame()
     }
     
     @IBAction func resumeGamePressed() {

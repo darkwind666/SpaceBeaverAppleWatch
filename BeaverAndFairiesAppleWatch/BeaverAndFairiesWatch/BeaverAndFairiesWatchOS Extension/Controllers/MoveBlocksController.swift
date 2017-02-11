@@ -23,29 +23,28 @@ class MoveBlocksController {
     func tryToMoveDownBlock(block: GameBlockModel) {
         
         let currentBlockPosition = block.blockGraphicNode.position
-        let newBlockPosition = CGPoint(x: currentBlockPosition.x, y: currentBlockPosition.y - gameLogicController.blocksSpeed)
+        let newBlockPosition = CGPoint(x: currentBlockPosition.x, y: currentBlockPosition.y - CGFloat(gameLogicController.blocksSpeed))
         block.blockGraphicNode.position = newBlockPosition
         
-        var loseHeight = (gameLogicController._blockHeight / 2)
+        let loseHeight = (gameLogicController.blockHeight / 2)
         
-        if newBlockPosition.y < loseHeight {
+        if newBlockPosition.y < CGFloat(loseHeight) {
             
             block.placed = true
-            block.blockGraphicNode.position = CGPoint(x: newBlockPosition.x, y: newBlockPosition.y + gameLogicController.blocksSpeed)
+            block.blockGraphicNode.position = CGPoint(x: newBlockPosition.x, y: newBlockPosition.y + CGFloat(gameLogicController.blocksSpeed))
             
         } else {
             
             for blockForCollision in gameLogicController.currentBlocks.array {
                 
-                if blockForCollision != block {
+                if blockForCollision !== block {
                     
-                    if block.blockGraphicNode.frame.intersects(blockForCollision.blockGraphicNode.frame || block.blockGraphicNode.position.y < loseHeight) {
+                    if block.blockGraphicNode.frame.intersects(blockForCollision.blockGraphicNode.frame) || (block.blockGraphicNode.position.y < CGFloat(loseHeight)) {
                         
-                        var index = gameLogicController.currentBlocks.array.indexOf(block)
                         block.placed = true
-                        var blockHeight = block.blockGraphicNode.frame.height
-                        var blockForCollisionPosition = blockForCollision.blockGraphicNode.position
-                        var finalPosition = CGPoint(x: blockForCollisionPosition.x, y: blockForCollisionPosition.y + gameLogicController.blocksSpeed + blockHeight + 0.01)
+                        let blockHeight = block.blockGraphicNode.frame.height
+                        let blockForCollisionPosition = blockForCollision.blockGraphicNode.position
+                        let finalPosition = CGPoint(x: blockForCollisionPosition.x, y: blockForCollisionPosition.y + CGFloat(gameLogicController.blocksSpeed) + blockHeight + 0.01 )
                         block.blockGraphicNode.position = finalPosition
                         break;
                         

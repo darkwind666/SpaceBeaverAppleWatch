@@ -12,5 +12,6 @@ class GameBlockModel {
     
     var placed = false;
     var blockGraphicNode: SKSpriteNode!
+    var blockTasks = [GameBlockTaskModel]()
     
 }
