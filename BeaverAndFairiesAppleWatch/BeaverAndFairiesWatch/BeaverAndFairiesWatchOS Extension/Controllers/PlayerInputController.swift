@@ -23,45 +23,46 @@ class PlayerInputController {
             
             var rigthSwipe = false
             
-            if blockType == 1 && gameLogicController.gameController.playerDirection == .Left {
+            if blockType == 0 && gameLogicController.gameController.playerDirection == .Left {
                 firstBlock?.blockTasks.removeFirst()
                 firstBlockTask?.blockTaskGraphicNode.removeFromParent()
                 gameLogicController.score += 1
                 rigthSwipe = true
             }
             
-            if blockType == 2 && gameLogicController.gameController.playerDirection == .Down {
+            if blockType == 1 && gameLogicController.gameController.playerDirection == .Right {
                 firstBlock?.blockTasks.removeFirst()
                 firstBlockTask?.blockTaskGraphicNode.removeFromParent()
                 gameLogicController.score += 1
                 rigthSwipe = true
             }
             
-            if blockType == 4 && gameLogicController.gameController.playerDirection == .Up {
+            if blockType == 2 && gameLogicController.gameController.playerDirection == .Up {
                 firstBlock?.blockTasks.removeFirst()
                 firstBlockTask?.blockTaskGraphicNode.removeFromParent()
                 gameLogicController.score += 1
                 rigthSwipe = true
             }
             
-            if blockType == 3 && gameLogicController.gameController.playerDirection == .Right {
+            if blockType == 3 && gameLogicController.gameController.playerDirection == .Down {
                 firstBlock?.blockTasks.removeFirst()
                 firstBlockTask?.blockTaskGraphicNode.removeFromParent()
                 gameLogicController.score += 1
                 rigthSwipe = true
             }
             
-            if blockType == 5 && gameLogicController.gameController.playerDirection == .Tap {
+            if blockType == 4 && gameLogicController.gameController.playerDirection == .Tap {
                 firstBlock?.blockTasks.removeFirst()
                 firstBlockTask?.blockTaskGraphicNode.removeFromParent()
                 gameLogicController.score += 1
             }
             
-            if (blockTasks?.count)! <= 0 {
+            if (firstBlock?.blockTasks.count)! <= 0 {
                 gameLogicController.removeFirstBlock()
             }
             
-            if(blockType! > 0 && blockType! < 5 && rigthSwipe == false && gameLogicController.gameController.playerDirection != .None){
+            if(blockType! < 5 && rigthSwipe == false &&
+                gameLogicController.gameController.playerDirection != .None && gameLogicController.currentBlocks.count > 0){
                 gameLogicController.showErrorSwipeAnimation()
             }
             

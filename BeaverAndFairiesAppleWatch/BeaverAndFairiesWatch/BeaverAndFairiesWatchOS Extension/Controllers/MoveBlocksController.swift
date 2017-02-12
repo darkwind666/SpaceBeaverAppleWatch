@@ -26,7 +26,8 @@ class MoveBlocksController {
         let newBlockPosition = CGPoint(x: currentBlockPosition.x, y: currentBlockPosition.y - CGFloat(gameLogicController.blocksSpeed))
         block.blockGraphicNode.position = newBlockPosition
         
-        let loseHeight = (gameLogicController.blockHeight / 2)
+        //let loseHeight = (gameLogicController.blockHeight / 2)
+        let loseHeight = -gameLogicController.blockHeight - 55
         
         if newBlockPosition.y < CGFloat(loseHeight) {
             

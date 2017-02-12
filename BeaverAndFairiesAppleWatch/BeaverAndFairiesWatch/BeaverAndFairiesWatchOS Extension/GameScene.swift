@@ -16,13 +16,13 @@ class GameScene: SKScene {
     var stopGame = false
     
     let blockBordersTemplates = ["1-5", "1-6", "1-7", "1-8", "1-9", "1-10", "1-11"]
-    let blockTasksTemplates = ["1-12", "1-13", "1-14", "1-15", "1-17-2"]
+    let blockTasksTemplates = ["Left", "Right", "Up", "Down", "Tap"]
     
     let blockSize = CGSize(width: 309, height: 80)
     let blockTaskSize = CGSize(width: 60, height: 70)
     let loseBlocksCount = 5
     let distanceBetweeneTasks = 0.01
-    let scaleAnimationDuration = 0.1
+    let scaleAnimationDuration = 0.3
     
     var blockHeight = 0.0
     var score = 0
@@ -78,13 +78,12 @@ class GameScene: SKScene {
         if currentSpawnTime >= spawnTime {
             
             currentSpawnTime = 0
-            
             let newBlock = GameBlockModel()
             
             let borderIndex = Int(arc4random_uniform(UInt32(blockBordersTemplates.count)))
             let blockBorder = SKSpriteNode(imageNamed: blockBordersTemplates[borderIndex])
             blockBorder.size = blockSize
-            blockBorder.position = CGPoint(x: blockBorder.position.x, y: 100)
+            blockBorder.position = CGPoint(x: blockBorder.position.x, y: 140)
             addChild(blockBorder)
             newBlock.blockGraphicNode = blockBorder
             
@@ -100,7 +99,7 @@ class GameScene: SKScene {
                 
                 var blockIndex = blockType
                 if blockType == 0 {
-                    blockIndex = Int(arc4random_uniform(UInt32(blockTasksTemplates.count - 1)))
+                    blockIndex = Int(arc4random_uniform(UInt32(blockTasksTemplates.count)))
                 }
                 
                 let blockTaskModel = GameBlockTaskModel()
@@ -136,12 +135,13 @@ class GameScene: SKScene {
         
         let firstBlock = currentBlocks.front
         let firstTask = firstBlock?.blockTasks[0]
+        let firstTaskSize = firstTask?.blockTaskGraphicNode.frame.size
         
-        let startScale = firstTask?.blockTaskGraphicNode.scaleAsPoint
-        let newScale = CGPoint(x: (startScale?.x)! * 1.5, y: (startScale?.y)! * 1.5)
+        let upScaleSize = CGSize(width: (firstTaskSize?.width)! * 1.5, height: (firstTaskSize?.height)! * 1.5)
+        let downScaleSize = firstTaskSize
         
-        let scaleUpAction = SKAction.scale(to: CGSize(width: newScale.x, height: newScale.y), duration: scaleAnimationDuration)
-        let scaleDownAction = SKAction.scale(to: CGSize(width: (startScale?.x)!, height: (startScale?.y)!), duration: scaleAnimationDuration)
+        let scaleUpAction = SKAction.scale(to: upScaleSize, duration: scaleAnimationDuration)
+        let scaleDownAction = SKAction.scale(to: downScaleSize!, duration: scaleAnimationDuration)
         let sequence = SKAction.sequence([scaleUpAction, scaleDownAction])
         
         firstTask?.blockTaskGraphicNode.run(sequence)
@@ -166,13 +166,11 @@ class GameScene: SKScene {
     
     func checkGameResult() {
         for block in currentBlocks.array {
-            
-            if block.placed == true && block.blockGraphicNode.position.y > CGFloat(loseHeight * blockHeight) {
+            if block.placed == true && block.blockGraphicNode.position.y >= CGFloat(140) {
                 lose = true;
                 stopGame = true;
                 break;
             }
-            
         }
     }
     
