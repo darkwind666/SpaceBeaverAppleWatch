@@ -167,11 +167,26 @@ class GameScene: SKScene {
     func checkGameResult() {
         for block in currentBlocks.array {
             if block.placed == true && block.blockGraphicNode.position.y >= CGFloat(140) {
-                lose = true;
-                stopGame = true;
-                break;
+                endGame()
+                break
             }
         }
+    }
+    
+    func endGame() {
+        
+        lose = true;
+        stopGame = true
+        
+        GamePlayerController.currentPlayerScore = score
+        
+        if score > GamePlayerController.playerBestScore {
+            GamePlayerController.playerBestScore = score
+            GamePlayerController.newPlayerRecord = true
+            GamePlayerController.savePlayerData()
+        }
+        
+        gameController.showEndGamePopUp()
     }
     
     func pauseGame() {
@@ -180,6 +195,21 @@ class GameScene: SKScene {
     
     func resumeGame() {
         stopGame = false
+    }
+    
+    func replayGame() {
+        
+        score = 0
+        scoreLabel.text = String(score)
+        
+        lose = false
+        
+        for block in currentBlocks.array {
+            block.blockGraphicNode.removeAllChildren()
+            block.blockGraphicNode.removeFromParent()
+        }
+        
+        currentBlocks = Queue<GameBlockModel>()
     }
     
 }

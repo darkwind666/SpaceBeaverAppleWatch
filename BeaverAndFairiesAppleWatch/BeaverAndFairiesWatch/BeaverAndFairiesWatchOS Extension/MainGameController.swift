@@ -28,37 +28,45 @@ class MainGameController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
-        
-        // Load the SKScene from 'GameScene.sks'
         if let scene = GameScene(fileNamed: "MainGameScene") {
             
-            // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFill
             scene.gameController = self
             gameScene = scene
-            
-            // Present the scene
             self.skInterface.presentScene(scene)
-            
-            // Use a value that will maintain a consistent frame rate
             self.skInterface.preferredFramesPerSecond = 30
+            
         }
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        if gameScene.lose == true {
+            gameScene.replayGame()
+        }
+        
+        gameScene.resumeGame()
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        savePlayerScore()
         gameScene.pauseGame()
     }
     
-    @IBAction func resumeGamePressed() {
+    func savePlayerScore() {
+        if gameScene.score > GamePlayerController.playerBestScore {
+            GamePlayerController.playerBestScore = gameScene.score
+            GamePlayerController.savePlayerData()
+        }
+    }
+    
+    func showEndGamePopUp() {
         pushController(withName: "GameEndController", context: Any?.self)
+    }
+    
+    @IBAction func resumeGamePressed() {
     }
     
     @IBAction func backPressed() {

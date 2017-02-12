@@ -70,7 +70,7 @@
             <objects>
                 <controller identifier="GameEndController" id="AOt-NG-MZI" customClass="GameEndController" customModule="BeaverAndFairiesWatchOS_Extension">
                     <items>
-                        <label width="79" alignment="center" text="Label" textAlignment="center" id="2KI-Wi-WHH" userLabel="ScoreLabel">
+                        <label width="130" alignment="center" text="Label" textAlignment="center" id="2KI-Wi-WHH" userLabel="ScoreLabel">
                             <color key="textColor" red="0.62745098039215685" green="0.45490196078431372" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                         <button width="70" height="63" alignment="center" backgroundImage="okonchanie_igry-4" id="O8x-0B-hjT" userLabel="ReplayGame">

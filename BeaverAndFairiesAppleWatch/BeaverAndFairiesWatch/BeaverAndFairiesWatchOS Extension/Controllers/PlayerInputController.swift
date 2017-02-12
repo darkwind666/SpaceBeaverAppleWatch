@@ -68,6 +68,7 @@ class PlayerInputController {
             
         }
         
+        GamePlayerController.currentPlayerScore = gameLogicController.score
         gameLogicController.gameController.playerDirection = .None
         
     }
