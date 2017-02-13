@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class MainMenuController: WKInterfaceController {
     
     @IBOutlet var scoresLabel: WKInterfaceLabel!
@@ -23,6 +22,8 @@ class MainMenuController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         GamePlayerController.setUpPlayerData()
+        
+        GameKitHelper.sharedInstance.authenticateLocalPlayer()
         
         var playerScore = GamePlayerController.playerBestScore
         
@@ -38,6 +39,7 @@ class MainMenuController: WKInterfaceController {
     }
     
     @IBAction func gameCenterButtonPressed() {
+        GameKitHelper.sharedInstance.showGKGameCenterViewController(viewController: self)
     }
     
 

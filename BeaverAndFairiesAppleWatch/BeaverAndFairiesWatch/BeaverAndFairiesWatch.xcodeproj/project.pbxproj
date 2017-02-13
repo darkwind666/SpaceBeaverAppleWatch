@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D908BB551E51E94C00B9301C /* Faith.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D908BB541E51E94C00B9301C /* Faith.mp3 */; };
+		D908BB5A1E51FD9B00B9301C /* GameKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D908BB581E51FD9B00B9301C /* GameKitHelper.swift */; };
+		D908BB5C1E5226BC00B9301C /* GameCenterWatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D908BB5B1E5226BC00B9301C /* GameCenterWatchController.swift */; };
+		D908BB5E1E522B5100B9301C /* PlayerRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D908BB5D1E522B5100B9301C /* PlayerRecordModel.swift */; };
 		D9185FFB1E4E36A400B33A66 /* PlayerInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9185FFA1E4E36A400B33A66 /* PlayerInputController.swift */; };
 		D9185FFD1E50D33A00B33A66 /* GamePlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9185FFC1E50D33900B33A66 /* GamePlayerController.swift */; };
 		D92338721E49FB4C00E64C50 /* MainGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D92338711E49FB4C00E64C50 /* MainGameScene.sks */; };
@@ -85,6 +89,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D908BB541E51E94C00B9301C /* Faith.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Faith.mp3; sourceTree = "<group>"; };
+		D908BB581E51FD9B00B9301C /* GameKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameKitHelper.swift; sourceTree = "<group>"; };
+		D908BB5B1E5226BC00B9301C /* GameCenterWatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameCenterWatchController.swift; path = Controllers/GameCenterWatchController.swift; sourceTree = "<group>"; };
+		D908BB5D1E522B5100B9301C /* PlayerRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerRecordModel.swift; path = Models/PlayerRecordModel.swift; sourceTree = "<group>"; };
 		D9185FFA1E4E36A400B33A66 /* PlayerInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerInputController.swift; path = Controllers/PlayerInputController.swift; sourceTree = "<group>"; };
 		D9185FFC1E50D33900B33A66 /* GamePlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayerController.swift; path = Controllers/GamePlayerController.swift; sourceTree = "<group>"; };
 		D92338711E49FB4C00E64C50 /* MainGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainGameScene.sks; sourceTree = "<group>"; };
@@ -142,6 +150,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D908BB561E51FD9B00B9301C /* GameKit */ = {
+			isa = PBXGroup;
+			children = (
+				D908BB581E51FD9B00B9301C /* GameKitHelper.swift */,
+			);
+			path = GameKit;
+			sourceTree = "<group>";
+		};
+		D9185FFE1E50F2CD00B33A66 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				D908BB541E51E94C00B9301C /* Faith.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		D92338731E49FB5900E64C50 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +183,7 @@
 				D9350F8E1E4CF4080081C809 /* MoveBlocksController.swift */,
 				D9185FFA1E4E36A400B33A66 /* PlayerInputController.swift */,
 				D9185FFC1E50D33900B33A66 /* GamePlayerController.swift */,
+				D908BB5B1E5226BC00B9301C /* GameCenterWatchController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +191,7 @@
 		D9350F881E4CDD6A0081C809 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				D908BB561E51FD9B00B9301C /* GameKit */,
 				D9350FD91E4D15B80081C809 /* SKTUtils */,
 				D9350F891E4CDDB10081C809 /* SwiftQueue.swift */,
 			);
@@ -177,6 +203,7 @@
 			children = (
 				D9350F8C1E4CE2720081C809 /* GameBlockModel.swift */,
 				D9813CAA1E4DEEC600079BB6 /* GameBlockTaskModel.swift */,
+				D908BB5D1E522B5100B9301C /* PlayerRecordModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -245,6 +272,7 @@
 		D982F1951E3E448F000ACD58 /* BeaverAndFairiesWatchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D9185FFE1E50F2CD00B33A66 /* Sound */,
 				D9350F8B1E4CDDF70081C809 /* Models */,
 				D9350F881E4CDD6A0081C809 /* Externals */,
 				D92338741E4A040700E64C50 /* Controllers */,
@@ -384,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D908BB551E51E94C00B9301C /* Faith.mp3 in Resources */,
 				D92338721E49FB4C00E64C50 /* MainGameScene.sks in Resources */,
 				D982F19F1E3E448F000ACD58 /* Assets.xcassets in Resources */,
 			);
@@ -420,8 +449,11 @@
 				D9350F8D1E4CE2720081C809 /* GameBlockModel.swift in Sources */,
 				D982F1971E3E448F000ACD58 /* MainGameController.swift in Sources */,
 				D9813CAB1E4DEEC700079BB6 /* GameBlockTaskModel.swift in Sources */,
+				D908BB5A1E51FD9B00B9301C /* GameKitHelper.swift in Sources */,
+				D908BB5C1E5226BC00B9301C /* GameCenterWatchController.swift in Sources */,
 				D9350FE71E4D15B80081C809 /* CGPoint+Extensions.swift in Sources */,
 				D9350FEC1E4D15B80081C809 /* SKColor+Extensions.swift in Sources */,
+				D908BB5E1E522B5100B9301C /* PlayerRecordModel.swift in Sources */,
 				D92338781E4A1DA500E64C50 /* GameEndController.swift in Sources */,
 				D9350FE91E4D15B80081C809 /* Int+Extensions.swift in Sources */,
 				D9350F8F1E4CF4080081C809 /* MoveBlocksController.swift in Sources */,

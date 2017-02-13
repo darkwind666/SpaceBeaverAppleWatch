@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import SpriteKit
 
 enum PlayerDirection {
     case Tap
@@ -51,6 +52,9 @@ class MainGameController: WKInterfaceController {
     
     override func didDeactivate() {
         super.didDeactivate()
+        
+        gameScene.backgroundSound.run(SKAction.stop())
+        
         savePlayerScore()
         gameScene.pauseGame()
     }

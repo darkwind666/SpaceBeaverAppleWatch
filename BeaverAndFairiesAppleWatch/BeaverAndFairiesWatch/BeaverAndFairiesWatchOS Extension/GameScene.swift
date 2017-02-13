@@ -12,6 +12,7 @@ class GameScene: SKScene {
     
     var gameController: MainGameController!
     var scoreLabel:SKLabelNode!
+    var backgroundSound: SKAudioNode!
     
     var stopGame = false
     
@@ -56,6 +57,7 @@ class GameScene: SKScene {
         scoreLabel = childNode(withName: "playerScoreLabel") as? SKLabelNode
         scoreLabel.text = String(score)
         
+        backgroundSound = childNode(withName: "gameBackgroundSound") as? SKAudioNode
     }
     
     
@@ -184,9 +186,15 @@ class GameScene: SKScene {
             GamePlayerController.playerBestScore = score
             GamePlayerController.newPlayerRecord = true
             GamePlayerController.savePlayerData()
+            reportScoreToGameCenter(score: Int64(score))
         }
         
         gameController.showEndGamePopUp()
+    }
+    
+    func reportScoreToGameCenter(score: Int64) {
+        GameKitHelper.sharedInstance.reportScore(score: score, forLeaderboardID:
+            "1111")
     }
     
     func pauseGame() {
