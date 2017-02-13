@@ -19,7 +19,52 @@ class GameCenterWatchController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        if GameKitHelper.sharedInstance.gameCenterEnabled == true {
+            loadRecordsFromGameCenter()
+        } else {
+            makeDefaultRecords()
+        }
+        
+        setUpTableView()
+    }
+    
+    func setUpTableView() {
+        
+        tableView.setNumberOfRows(playersRecords.count, withRowType: "RecordRow")
+        
+        for index in 0..<tableView.numberOfRows {
+            guard let controller = tableView.rowController(at: index) as? PlayerRecordRowController else { continue }
+            let playerRecordModel = playersRecords[index]
+            controller.playerRecord.setText(String(index + 1) + "  " + playerRecordModel.playerName + ":  " + playerRecordModel.playerRecord)
+        }
+    }
+    
+    func makeDefaultRecords() {
+        
+        let record1 = PlayerRecordModel()
+        record1.playerRecord = ""
+        record1.playerName = ""
+        
+        let record2 = PlayerRecordModel()
+        record2.playerRecord = ""
+        record2.playerName = ""
+        
+        let record3 = PlayerRecordModel()
+        record3.playerRecord = ""
+        record3.playerName = ""
+        
+        playersRecords = [record1, record2, record3]
+    }
+    
+    func loadRecordsFromGameCenter() {
+        
+        GameKitHelper.sharedInstance.getPlayerScores(succesCallback: { records in
+            self.playersRecords = records
+            self.setUpTableView()
+        }) {
+            self.makeDefaultRecords()
+            self.setUpTableView()
+        }
     }
 
     override func willActivate() {

@@ -186,15 +186,14 @@ class GameScene: SKScene {
             GamePlayerController.playerBestScore = score
             GamePlayerController.newPlayerRecord = true
             GamePlayerController.savePlayerData()
-            reportScoreToGameCenter(score: Int64(score))
+            reportScoreToGameCenter()
         }
         
         gameController.showEndGamePopUp()
     }
     
-    func reportScoreToGameCenter(score: Int64) {
-        GameKitHelper.sharedInstance.reportScore(score: score, forLeaderboardID:
-            "1111")
+    func reportScoreToGameCenter() {
+        GameKitHelper.sharedInstance.reportScore(score: Int64(score))
     }
     
     func pauseGame() {

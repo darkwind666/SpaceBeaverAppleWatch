@@ -54,9 +54,10 @@ class MainGameController: WKInterfaceController {
         super.didDeactivate()
         
         gameScene.backgroundSound.run(SKAction.stop())
-        
         savePlayerScore()
+        gameScene.reportScoreToGameCenter()
         gameScene.pauseGame()
+        
     }
     
     func savePlayerScore() {

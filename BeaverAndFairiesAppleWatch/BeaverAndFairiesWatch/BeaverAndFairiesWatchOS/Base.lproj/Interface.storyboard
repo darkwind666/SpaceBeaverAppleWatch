@@ -125,7 +125,7 @@
                     <items>
                         <table alignment="left" id="WNL-oA-WM3">
                             <items>
-                                <tableRow identifier="RecordRow" id="qsa-mY-MtF">
+                                <tableRow identifier="RecordRow" id="qsa-mY-MtF" customClass="PlayerRecordRowController" customModule="BeaverAndFairiesWatchOS_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="U5q-hv-K3a">
                                         <items>
                                             <separator alignment="left" id="mtz-dQ-wp4">
@@ -136,6 +136,9 @@
                                             </label>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="playerRecord" destination="oTc-ee-xik" id="d5F-wU-sap"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

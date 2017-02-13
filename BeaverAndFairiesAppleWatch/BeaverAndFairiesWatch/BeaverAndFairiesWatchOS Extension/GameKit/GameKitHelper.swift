@@ -34,6 +34,7 @@ class GameKitHelper: NSObject {
   static let sharedInstance = GameKitHelper()
   static let PresentAuthenticationViewController =
     "PresentAuthenticationViewController"
+  static let leaderboardId = "CgkIqZnn8MUPEAIQAA"
   
   var authenticationViewController: WKInterfaceController?
   var gameCenterEnabled = false
@@ -88,7 +89,7 @@ class GameKitHelper: NSObject {
     
   }
   
-  func reportScore(score: Int64, forLeaderboardID leaderboardID: String, errorHandler: ((Error?)->Void)? = nil) {
+  func reportScore(score: Int64, errorHandler: ((Error?)->Void)? = nil) {
     guard gameCenterEnabled else {
       return
     }
@@ -98,13 +99,53 @@ class GameKitHelper: NSObject {
     #else
         
         //1
-        let gkScore = GKScore(leaderboardIdentifier: leaderboardID)
+        let gkScore = GKScore(leaderboardIdentifier: leaderboardId)
         gkScore.value = score
         
         //2
         GKScore.report([gkScore], withCompletionHandler: errorHandler)
         
     #endif
+    }
+
+    func getPlayerScores(succesCallback: @escaping ([PlayerRecordModel])->(), errorCallback: @escaping ()->()) {
+        
+        #if !arch(i386) || !arch(x86_64)
+            errorCallback()
+        #else
+            
+            let leaderBoardRequest = GKLeaderboard()
+            leaderBoardRequest.identifier = leaderboardId // my GC Leaderboard ID
+            leaderBoardRequest.playerScope = GKLeaderboardPlayerScope.Global
+            leaderBoardRequest.timeScope = GKLeaderboardTimeScope.AllTime
+            leaderBoardRequest.range = NSMakeRange(1,10) // top 10
+            
+            leaderBoardRequest.loadScoresWithCompletionHandler
+                { (scores, error) -> Void in
+                    if (error != nil)
+                    {
+                        errorCallback()
+                    } else if (scores != nil)
+                    {
+                        
+                        var records = [PlayerRecordModel]()
+                        
+                        for score in scores {
+                            let record = PlayerRecordModel()
+                            record.playerRecord = score.value
+                            record.playerName = score.player.alias!
+                            records.append(record)
+                        }
+                        
+                        succesCallback(records)
+                        
+                    } else {
+                        errorCallback()
+                    }
+            }
+            
+        #endif
+        
+    }
     
-  }
 }
