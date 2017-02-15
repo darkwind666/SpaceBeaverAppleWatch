@@ -24,6 +24,7 @@ class GameScene: SKScene {
     let loseBlocksCount = 5
     let distanceBetweeneTasks = 0.01
     let scaleAnimationDuration = 0.3
+    let finalPosition = 140
     
     var blockHeight = 0.0
     var score = 0
@@ -41,6 +42,7 @@ class GameScene: SKScene {
     
     var moveBlocksController: MoveBlocksController!
     var playerInputController: PlayerInputController!
+    var gameBalanceController: GameBalanceController!
     
     override func sceneDidLoad() {
         
@@ -53,6 +55,8 @@ class GameScene: SKScene {
         moveBlocksController.gameLogicController = self
         playerInputController = PlayerInputController()
         playerInputController.gameLogicController = self
+        gameBalanceController = GameBalanceController()
+        gameBalanceController.gameLogicController = self
         
         scoreLabel = childNode(withName: "playerScoreLabel") as? SKLabelNode
         scoreLabel.text = String(score)
@@ -64,6 +68,7 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         
         if lose == false && stopGame == false {
+            gameBalanceController.updateGameStage()
             spawnNewBlock()
             playerInputController.getUserInput()
             moveBlocksController.moveDownBlocks()
@@ -79,57 +84,80 @@ class GameScene: SKScene {
         
         if currentSpawnTime >= spawnTime {
             
-            currentSpawnTime = 0
-            let newBlock = GameBlockModel()
-            
-            let borderIndex = Int(arc4random_uniform(UInt32(blockBordersTemplates.count)))
-            let blockBorder = SKSpriteNode(imageNamed: blockBordersTemplates[borderIndex])
-            blockBorder.size = blockSize
-            blockBorder.position = CGPoint(x: blockBorder.position.x, y: 140)
-            addChild(blockBorder)
-            newBlock.blockGraphicNode = blockBorder
-            
-            var taskCount = blockTasksCount
-            if(randomTasksCount)
-            {
-                taskCount = 1 + Int(arc4random_uniform(UInt32(blockTasksCount + 1)))
-            }
-            
-            var tasksLength = 0.0
-            
-            for _ in 0...taskCount {
+            if currentBlocks.array.count > 0 {
                 
-                var blockIndex = blockType
-                if blockType == 0 {
-                    blockIndex = Int(arc4random_uniform(UInt32(blockTasksTemplates.count)))
+                let lastBlockPosition = currentBlocks.array.last!.blockGraphicNode.position
+                let finalHeight = Double(lastBlockPosition.y + CGFloat(blockHeight / 2))
+                let newBlockBottomHeight = Double(finalPosition) - blockHeight / 2
+                
+                if finalHeight < newBlockBottomHeight {
+                    self.createNewBlockOnYPosition(yPosition: CGFloat(finalPosition))
+                } else {
+                    self.createNewBlockOnYPosition(yPosition: CGFloat(finalHeight + blockHeight / 2) + 1)
                 }
                 
-                let blockTaskModel = GameBlockTaskModel()
-                blockTaskModel.taskType = blockIndex
-                let blockTaskGraphic = SKSpriteNode(imageNamed: blockTasksTemplates[blockIndex])
-                
-                blockTaskGraphic.size = blockTaskSize
-                blockTaskModel.blockTaskGraphicNode = blockTaskGraphic
-                blockBorder.addChild(blockTaskGraphic)
-                
-                newBlock.blockTasks.append(blockTaskModel)
-                tasksLength += Double(blockTaskGraphic.frame.width + CGFloat(distanceBetweeneTasks))
-                
+            } else {
+                self.createNewBlockOnYPosition(yPosition: CGFloat(finalPosition))
             }
             
-            tasksLength -= distanceBetweeneTasks
-            var startX = -tasksLength / 2.0
-            
-            for task in newBlock.blockTasks {
-                
-                let width = task.blockTaskGraphicNode.frame.width
-                task.blockTaskGraphicNode.position = CGPoint( x: CGFloat(startX) + CGFloat(width / 2), y: task.blockTaskGraphicNode.position.y)
-                startX += (Double(width) + distanceBetweeneTasks)
-                
-            }
-            
-            currentBlocks.enqueue(newBlock)
         }
+        
+    }
+    
+    func createNewBlockOnYPosition(yPosition: CGFloat) {
+        
+        currentSpawnTime = 0
+        let newBlock = GameBlockModel()
+        
+        let borderIndex = Int(arc4random_uniform(UInt32(blockBordersTemplates.count)))
+        let blockBorder = SKSpriteNode(imageNamed: blockBordersTemplates[borderIndex])
+        blockBorder.size = blockSize
+        blockBorder.position = CGPoint(x: blockBorder.position.x, y: yPosition)
+        
+        
+        addChild(blockBorder)
+        newBlock.blockGraphicNode = blockBorder
+        
+        var taskCount = blockTasksCount - 1
+        if(randomTasksCount)
+        {
+            taskCount = Int(arc4random_uniform(UInt32(blockTasksCount)))
+        }
+        
+        var tasksLength = 0.0
+        
+        for _ in 0...taskCount {
+            
+            var blockIndex = blockType
+            if blockType == 0 {
+                blockIndex = Int(arc4random_uniform(UInt32(blockTasksTemplates.count)))
+            }
+            
+            let blockTaskModel = GameBlockTaskModel()
+            blockTaskModel.taskType = blockIndex
+            let blockTaskGraphic = SKSpriteNode(imageNamed: blockTasksTemplates[blockIndex])
+            
+            blockTaskGraphic.size = blockTaskSize
+            blockTaskModel.blockTaskGraphicNode = blockTaskGraphic
+            blockBorder.addChild(blockTaskGraphic)
+            
+            newBlock.blockTasks.append(blockTaskModel)
+            tasksLength += Double(blockTaskGraphic.frame.width + CGFloat(distanceBetweeneTasks))
+            
+        }
+        
+        tasksLength -= distanceBetweeneTasks
+        var startX = -tasksLength / 2.0
+        
+        for task in newBlock.blockTasks {
+            
+            let width = task.blockTaskGraphicNode.frame.width
+            task.blockTaskGraphicNode.position = CGPoint( x: CGFloat(startX) + CGFloat(width / 2), y: task.blockTaskGraphicNode.position.y)
+            startX += (Double(width) + distanceBetweeneTasks)
+            
+        }
+        
+        currentBlocks.enqueue(newBlock)
         
     }
     
@@ -168,7 +196,7 @@ class GameScene: SKScene {
     
     func checkGameResult() {
         for block in currentBlocks.array {
-            if block.placed == true && block.blockGraphicNode.position.y >= CGFloat(140) {
+            if block.placed == true && block.blockGraphicNode.position.y >= CGFloat(finalPosition) {
                 endGame()
                 break
             }

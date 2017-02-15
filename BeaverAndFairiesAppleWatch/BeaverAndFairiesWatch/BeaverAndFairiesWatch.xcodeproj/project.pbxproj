@@ -32,6 +32,8 @@
 		D9350FEF1E4D15B80081C809 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9350FE31E4D15B80081C809 /* SKTEffects.swift */; };
 		D9350FF01E4D15B80081C809 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9350FE41E4D15B80081C809 /* SKTTimingFunctions.swift */; };
 		D9350FF11E4D15B80081C809 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9350FE51E4D15B80081C809 /* Vector3.swift */; };
+		D955FA631E5329B500AB1865 /* GameBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D955FA621E5329B400AB1865 /* GameBalanceController.swift */; };
+		D955FA651E5335D700AB1865 /* GameStageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D955FA641E5335D700AB1865 /* GameStageModel.swift */; };
 		D9813CAB1E4DEEC700079BB6 /* GameBlockTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9813CAA1E4DEEC600079BB6 /* GameBlockTaskModel.swift */; };
 		D982F1721E3E4457000ACD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1711E3E4457000ACD58 /* AppDelegate.swift */; };
 		D982F1741E3E4457000ACD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1731E3E4457000ACD58 /* ViewController.swift */; };
@@ -115,6 +117,8 @@
 		D9350FE31E4D15B80081C809 /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
 		D9350FE41E4D15B80081C809 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		D9350FE51E4D15B80081C809 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		D955FA621E5329B400AB1865 /* GameBalanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameBalanceController.swift; path = Controllers/GameBalanceController.swift; sourceTree = "<group>"; };
+		D955FA641E5335D700AB1865 /* GameStageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameStageModel.swift; path = Models/GameStageModel.swift; sourceTree = "<group>"; };
 		D9813CAA1E4DEEC600079BB6 /* GameBlockTaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameBlockTaskModel.swift; path = Models/GameBlockTaskModel.swift; sourceTree = "<group>"; };
 		D982F16E1E3E4457000ACD58 /* BeaverAndFairiesWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaverAndFairiesWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D982F1711E3E4457000ACD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				D9185FFC1E50D33900B33A66 /* GamePlayerController.swift */,
 				D908BB5B1E5226BC00B9301C /* GameCenterWatchController.swift */,
 				D908BB5F1E522DE500B9301C /* PlayerRecordRowController.swift */,
+				D955FA621E5329B400AB1865 /* GameBalanceController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				D9350F8C1E4CE2720081C809 /* GameBlockModel.swift */,
 				D9813CAA1E4DEEC600079BB6 /* GameBlockTaskModel.swift */,
 				D908BB5D1E522B5100B9301C /* PlayerRecordModel.swift */,
+				D955FA641E5335D700AB1865 /* GameStageModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -441,7 +447,9 @@
 				D982F19B1E3E448F000ACD58 /* GameScene.swift in Sources */,
 				D9350FED1E4D15B80081C809 /* SKNode+Extensions.swift in Sources */,
 				D9350FF01E4D15B80081C809 /* SKTTimingFunctions.swift in Sources */,
+				D955FA631E5329B500AB1865 /* GameBalanceController.swift in Sources */,
 				D9350FE61E4D15B80081C809 /* CGFloat+Extensions.swift in Sources */,
+				D955FA651E5335D700AB1865 /* GameStageModel.swift in Sources */,
 				D9350FEB1E4D15B80081C809 /* SKAction+SpecialEffects.swift in Sources */,
 				D9185FFB1E4E36A400B33A66 /* PlayerInputController.swift in Sources */,
 				D9350F8A1E4CDDB10081C809 /* SwiftQueue.swift in Sources */,
