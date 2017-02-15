@@ -55,6 +55,7 @@ class PlayerInputController {
                 firstBlock?.blockTasks.removeFirst()
                 firstBlockTask?.blockTaskGraphicNode.removeFromParent()
                 gameLogicController.score += 1
+                rigthSwipe = true
             }
             
             if (firstBlock?.blockTasks.count)! <= 0 {

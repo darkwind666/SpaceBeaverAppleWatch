@@ -18,6 +18,8 @@ class GameScene: SKScene {
     
     let blockBordersTemplates = ["1-5", "1-6", "1-7", "1-8", "1-9", "1-10", "1-11"]
     let blockTasksTemplates = ["Left", "Right", "Up", "Down", "Tap"]
+    let blockTasksTemplatesYPositions = [2.314, 3.0, -5.0, 0.0, 5]
+    let backgroundSoundTemplates = ["TFB9.mp3", "Opening Night.mp3", "Faith.mp3"]
     
     let blockSize = CGSize(width: 309, height: 80)
     let blockTaskSize = CGSize(width: 60, height: 70)
@@ -65,7 +67,18 @@ class GameScene: SKScene {
         scoreLabel = childNode(withName: "playerScoreLabel") as? SKLabelNode
         scoreLabel.text = String(score)
         
-        backgroundSound = childNode(withName: "gameBackgroundSound") as? SKAudioNode
+        setUpGameSound()
+    }
+    
+    func setUpGameSound() {
+        
+        let soundNameIndex = Int(arc4random_uniform(UInt32(backgroundSoundTemplates.count)))
+        let audioNode = SKAudioNode(fileNamed: backgroundSoundTemplates[soundNameIndex])
+        audioNode.autoplayLooped = true
+        backgroundSound = audioNode
+        addChild(audioNode)
+        let playAction = SKAction.play()
+        audioNode.run(playAction)
     }
     
     
@@ -142,7 +155,7 @@ class GameScene: SKScene {
             let blockTaskModel = GameBlockTaskModel()
             blockTaskModel.taskType = blockIndex
             let blockTaskGraphic = SKSpriteNode(imageNamed: blockTasksTemplates[blockIndex])
-            
+            blockTaskGraphic.position.y = CGFloat(blockTasksTemplatesYPositions[blockIndex])
             blockTaskGraphic.size = blockTaskSize
             blockTaskModel.blockTaskGraphicNode = blockTaskGraphic
             blockBorder.addChild(blockTaskGraphic)
@@ -164,7 +177,6 @@ class GameScene: SKScene {
         }
         
         currentBlocks.enqueue(newBlock)
-        
     }
     
     func showErrorSwipeAnimation() {

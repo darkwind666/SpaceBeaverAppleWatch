@@ -48,6 +48,8 @@
 		D982F19D1E3E448F000ACD58 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */; };
 		D982F19F1E3E448F000ACD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D982F19E1E3E448F000ACD58 /* Assets.xcassets */; };
 		D982F1A31E3E448F000ACD58 /* BeaverAndFairiesWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D982F1851E3E448E000ACD58 /* BeaverAndFairiesWatchOS.app */; };
+		D98FF8741E54BA1000BD5B03 /* Opening Night.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D98FF8731E54BA1000BD5B03 /* Opening Night.mp3 */; };
+		D98FF8761E54BA1B00BD5B03 /* TFB9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D98FF8751E54BA1B00BD5B03 /* TFB9.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		D982F19C1E3E448F000ACD58 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D982F19E1E3E448F000ACD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D982F1A01E3E448F000ACD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D98FF8731E54BA1000BD5B03 /* Opening Night.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Opening Night.mp3"; sourceTree = "<group>"; };
+		D98FF8751E54BA1B00BD5B03 /* TFB9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TFB9.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 		D9185FFE1E50F2CD00B33A66 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				D98FF8751E54BA1B00BD5B03 /* TFB9.mp3 */,
+				D98FF8731E54BA1000BD5B03 /* Opening Night.mp3 */,
 				D908BB541E51E94C00B9301C /* Faith.mp3 */,
 			);
 			name = Sound;
@@ -425,6 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D908BB551E51E94C00B9301C /* Faith.mp3 in Resources */,
+				D98FF8741E54BA1000BD5B03 /* Opening Night.mp3 in Resources */,
+				D98FF8761E54BA1B00BD5B03 /* TFB9.mp3 in Resources */,
 				D92338721E49FB4C00E64C50 /* MainGameScene.sks in Resources */,
 				D982F19F1E3E448F000ACD58 /* Assets.xcassets in Resources */,
 			);
