@@ -43,6 +43,7 @@ class GameScene: SKScene {
     var moveBlocksController: MoveBlocksController!
     var playerInputController: PlayerInputController!
     var gameBalanceController: GameBalanceController!
+    var gameTutorialController: GameTutorialController!
     
     override func sceneDidLoad() {
         
@@ -57,6 +58,9 @@ class GameScene: SKScene {
         playerInputController.gameLogicController = self
         gameBalanceController = GameBalanceController()
         gameBalanceController.gameLogicController = self
+        gameTutorialController = GameTutorialController()
+        gameTutorialController.gameLogicController = self
+        gameTutorialController.startTutorial()
         
         scoreLabel = childNode(withName: "playerScoreLabel") as? SKLabelNode
         scoreLabel.text = String(score)
@@ -66,6 +70,8 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
+        
+        gameTutorialController.update()
         
         if lose == false && stopGame == false {
             gameBalanceController.updateGameStage()

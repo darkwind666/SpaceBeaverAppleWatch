@@ -47,7 +47,10 @@ class MainGameController: WKInterfaceController {
             gameScene.replayGame()
         }
         
-        gameScene.resumeGame()
+        if gameScene.gameTutorialController.activeTutorial == false {
+            gameScene.resumeGame()
+        }
+        
     }
     
     override func didDeactivate() {

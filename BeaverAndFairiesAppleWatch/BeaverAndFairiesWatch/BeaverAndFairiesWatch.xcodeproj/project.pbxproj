@@ -34,6 +34,7 @@
 		D9350FF11E4D15B80081C809 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9350FE51E4D15B80081C809 /* Vector3.swift */; };
 		D955FA631E5329B500AB1865 /* GameBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D955FA621E5329B400AB1865 /* GameBalanceController.swift */; };
 		D955FA651E5335D700AB1865 /* GameStageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D955FA641E5335D700AB1865 /* GameStageModel.swift */; };
+		D955FA671E546A1C00AB1865 /* GameTutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D955FA661E546A1C00AB1865 /* GameTutorialController.swift */; };
 		D9813CAB1E4DEEC700079BB6 /* GameBlockTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9813CAA1E4DEEC600079BB6 /* GameBlockTaskModel.swift */; };
 		D982F1721E3E4457000ACD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1711E3E4457000ACD58 /* AppDelegate.swift */; };
 		D982F1741E3E4457000ACD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982F1731E3E4457000ACD58 /* ViewController.swift */; };
@@ -119,6 +120,7 @@
 		D9350FE51E4D15B80081C809 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		D955FA621E5329B400AB1865 /* GameBalanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameBalanceController.swift; path = Controllers/GameBalanceController.swift; sourceTree = "<group>"; };
 		D955FA641E5335D700AB1865 /* GameStageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameStageModel.swift; path = Models/GameStageModel.swift; sourceTree = "<group>"; };
+		D955FA661E546A1C00AB1865 /* GameTutorialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTutorialController.swift; path = Controllers/GameTutorialController.swift; sourceTree = "<group>"; };
 		D9813CAA1E4DEEC600079BB6 /* GameBlockTaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameBlockTaskModel.swift; path = Models/GameBlockTaskModel.swift; sourceTree = "<group>"; };
 		D982F16E1E3E4457000ACD58 /* BeaverAndFairiesWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaverAndFairiesWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D982F1711E3E4457000ACD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				D908BB5B1E5226BC00B9301C /* GameCenterWatchController.swift */,
 				D908BB5F1E522DE500B9301C /* PlayerRecordRowController.swift */,
 				D955FA621E5329B400AB1865 /* GameBalanceController.swift */,
+				D955FA661E546A1C00AB1865 /* GameTutorialController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D955FA671E546A1C00AB1865 /* GameTutorialController.swift in Sources */,
 				D9185FFD1E50D33A00B33A66 /* GamePlayerController.swift in Sources */,
 				D982F19B1E3E448F000ACD58 /* GameScene.swift in Sources */,
 				D9350FED1E4D15B80081C809 /* SKNode+Extensions.swift in Sources */,
