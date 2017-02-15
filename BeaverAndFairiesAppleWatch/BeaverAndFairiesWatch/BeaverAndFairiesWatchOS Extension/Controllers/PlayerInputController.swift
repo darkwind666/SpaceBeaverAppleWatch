@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import WatchKit
 
 class PlayerInputController {
     
@@ -65,6 +66,7 @@ class PlayerInputController {
             if(blockType! < 5 && rigthSwipe == false &&
                 gameLogicController.gameController.playerDirection != .None && gameLogicController.currentBlocks.count > 0){
                 gameLogicController.showErrorSwipeAnimation()
+                WKInterfaceDevice.current().play(.failure)
             }
             
         }

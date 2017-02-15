@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import WatchKit
 
 class GameScene: SKScene {
     
@@ -68,6 +69,7 @@ class GameScene: SKScene {
         scoreLabel.text = String(score)
         
         setUpGameSound()
+        WKInterfaceDevice.current().play(.start)
     }
     
     func setUpGameSound() {
@@ -235,6 +237,7 @@ class GameScene: SKScene {
             reportScoreToGameCenter()
         }
         
+        WKInterfaceDevice.current().play(.retry)
         gameController.showEndGamePopUp()
     }
     
@@ -263,6 +266,7 @@ class GameScene: SKScene {
         }
         
         currentBlocks = Queue<GameBlockModel>()
+        setUpGameSound()
     }
     
 }
