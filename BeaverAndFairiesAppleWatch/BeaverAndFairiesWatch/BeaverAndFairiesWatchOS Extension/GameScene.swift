@@ -74,6 +74,13 @@ class GameScene: SKScene {
     
     func setUpGameSound() {
         
+        if backgroundSound != nil {
+            
+            backgroundSound.run(SKAction.stop())
+            backgroundSound.removeFromParent()
+            
+        }
+        
         let soundNameIndex = Int(arc4random_uniform(UInt32(backgroundSoundTemplates.count)))
         let audioNode = SKAudioNode(fileNamed: backgroundSoundTemplates[soundNameIndex])
         audioNode.autoplayLooped = true
