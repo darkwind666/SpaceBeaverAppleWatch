@@ -45,19 +45,13 @@ class GameKitHelper: NSObject {
         
     #else
         
-        // 1
         GKLocalPlayer.localPlayer().authenticateHandler =
             { (viewController, error) in
-                // 2
-                self.gameCenterEnabled = false
-                if viewController != nil {
-                    // 3
-                    self.authenticationViewController = viewController
-                    NotificationCenter.default.post(name: NSNotification.Name(
-                        GameKitHelper.PresentAuthenticationViewController),
-                                                    object: self)
-                } else if GKLocalPlayer.localPlayer().isAuthenticated {
-                    // 4
+                
+                if let error = error {
+                    self.gameCenterEnabled = false
+                }
+                else {
                     self.gameCenterEnabled = true
                 }
         }
