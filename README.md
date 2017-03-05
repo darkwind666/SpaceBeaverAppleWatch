@@ -10,6 +10,10 @@
 ![alt tag](http://i67.tinypic.com/2hpk9ah.jpg)
 ![alt tag](http://i68.tinypic.com/ip60jc.jpg)
 
+# How to Build
+
+Build and run with Xcode 8
+
 # Description
 
 Space Beaver - a simple, addictive, mini game that you can play with the touch of a finger. You need to swipe your finger in the direction of the falling blocks (swipe left, right, up, down, or tap). There are also deceleration bonuses and removal unit bonuses. The game has a store with fairies :)
@@ -28,6 +32,11 @@ Features:
 - the game does not require any purchases (not even to unlock features!)
 
 The game is convenient to use in the subway, or while waiting for any meeting to start.
+
+# WWDC Resources
+
+[Game Technologies for Apple Watch](https://developer.apple.com/videos/play/wwdc2016/612/)
+
 
 
 
