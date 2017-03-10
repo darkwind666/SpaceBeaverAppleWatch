@@ -2,7 +2,7 @@
 
 ![alt tag](http://i65.tinypic.com/5b91ti.jpg)
 
-# Apple store link: [Apple store](https://itunes.apple.com/us/app/space-beaver-cool-reaction-game-with-gesture/id1189833629?ls=1&mt=8)
+# Apple store link: [Apple store](https://itunes.apple.com/app/apple-store/id1189833629?pt=118281202&ct=appleWatchGit&mt=8)
 
 ![alt tag](http://i64.tinypic.com/15xsf0o.jpg)
 ![alt tag](http://i63.tinypic.com/289j53n.jpg)
